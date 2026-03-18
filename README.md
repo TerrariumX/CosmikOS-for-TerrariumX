@@ -55,22 +55,22 @@ RadonOS focuses on:
 
 ### General DevKits
 
-| Family             | Supported  | Tested in Preview Builds? | Notes                                                                                  |
-| ------------------ | ---------- | ------------------------- | -------------------------------------------------------------------------------------- | 
-| ESP32-P4           | ✅         | ✅                       | Primary target platform                                                                | 
-| ESP32-S3           | ✅         | ✅                       | Supported at launch                                                                    |
-| ESP32-S2           | ✅         | ❌                       | Supported at launch                                                                    |
-| ESP32-C6           | 🛠️         | ✅                       | Supported after update                                                                 |
-| ESP32-C61          | 🛠️         | ❌                       | Supported after update                                                                 |
-| ESP32-C5           | 🛠️         | ✅                       | Supported after update                                                                 |
-| ESP32-C3           | 🛠️         | ❌                       | Supported after update                                                                 |
-| ESP8685 (C3 Based) | 🛠️         | ❌                       | Supported after update                                                                 |
-| ESP32-C2 (ESP8684) | 🛠️         | ❌                       | Supported after update                                                                 |
-| ESP32-H2           | 🛠️         | ❌                       | Only for certain software variations and will be supported later than other modules    |
-| ESP32              | 🛠️         | ❌                       | Supported soon after launch                                                            |
-| ESP32-E22          | ❓TBA      | ❌                       | Unreleased Module                                                                      |
-| ESP32-H21          | ❓TBA      | ❌                       | Unreleased Module                                                                      |
-| ESP32-H4           | ❓TBA      | ❌                       | Unreleased Module                                                                      |
+| Family             | Supported  | Tested in Preview Builds? | Notes                                                  |
+| ------------------ | ---------- | ------------------------- |-------------------------------------------------------- | 
+| ESP32-P4           | ✅         | ✅                       | Primary target platform                                 | 
+| ESP32-S3           | ✅         | ✅                       | Supported at launch                                     |
+| ESP32-S2           | ✅         | ❌                       | Supported at launch                                     |
+| ESP32-C6           | 🛠️         | ✅                       | Supported after update                                  |
+| ESP32-C61          | 🛠️         | ❌                       | Supported after update                                  |
+| ESP32-C5           | 🛠️         | ✅                       | Supported after update                                  |
+| ESP32-C3           | 🛠️         | ❌                       | Supported after update                                  |
+| ESP8685 (C3 Based) | 🛠️         | ❌                       | Supported after update                                  |
+| ESP32-C2 (ESP8684) | 🛠️         | ❌                       | Supported after update                                  |
+| ESP32-H2           | 🛠️         | ❌                       | Limited Connectivity, Unknown support in the future     |
+| ESP32              | 🛠️         | ❌                       | Supported soon after launch                             |
+| ESP32-E22          | ❓TBA      | ❌                       | Unreleased Module                                       |
+| ESP32-H21          | ❓TBA      | ❌                       | Unreleased Module                                       |
+| ESP32-H4           | ❓TBA      | ❌                       | Unreleased Module                                       |
 
 > Specific board support may vary in capabilities depending on the board hardware configuration.
 
