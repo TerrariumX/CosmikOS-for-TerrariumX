@@ -47,11 +47,6 @@ RadonOS focuses on:
 | ESP32-S3-Mini           | ESP32-S3 | Small form factor WiFi-enabled |✅       | ❌    |
 | ESP32-S3-Nano           | ESP32-S3 | WiFi-enabled dev-kit           |✅       | ❌    |
 
-### TerrariumX boards
-
-| Board          | MCU         | Notes                               | Support      | Tested | Board Ready |
-| -------------- | ----------- | ----------------------------------- | ------------ | ------ | ----------- |
-| **TXMB-P4-R1** | ESP32-P4    | In house-engineered TerrarumX Board | ✅ (v1.0)   | ❌     | ❌         |
 
 ### General DevKits
 
@@ -59,7 +54,7 @@ RadonOS focuses on:
 | ------------------ | ---------- | ------------------------- |-------------------------------------------------------- | 
 | ESP32-P4           | ✅         | ✅                       | Primary target platform                                 | 
 | ESP32-S3           | ✅         | ✅                       | Supported at launch                                     |
-| ESP32-S2           | ✅         | ❌                       | Supported at launch                                     |
+| ESP32-S2           | 🛠️         | ❌                       | Supported after update                                  |
 | ESP32-C6           | 🛠️         | ✅                       | Supported after update                                  |
 | ESP32-C61          | 🛠️         | ❌                       | Supported after update                                  |
 | ESP32-C5           | 🛠️         | ✅                       | Supported after update                                  |
@@ -69,6 +64,7 @@ RadonOS focuses on:
 | ESP32-H2           | 🛠️         | ❌                       | Limited Connectivity, Unknown support in the future     |
 | ESP32              | 🛠️         | ❌                       | Supported soon after launch                             |
 | ESP32-E22          | ❓TBA      | ❌                       | Unreleased Module                                       |
+| ESP32-S31          | ❓TBA      | ❌                       | Unreleased Module                                       |
 | ESP32-H21          | ❓TBA      | ❌                       | Unreleased Module                                       |
 | ESP32-H4           | ❓TBA      | ❌                       | Unreleased Module                                       |
 
