@@ -12,12 +12,6 @@ It is the core OS behind the **TerrariumX ecosystem**, but it can also be used a
 RadonOS is designed with a simple idea in mind: **treat embedded systems like real systems**, not disposable firmware.
 
 ---
-## 📅 Release date
-RadonOS 1.00 will be available as fully stable and tested between **Q1 2026 and Q2 2026**
-
-For now expect releases for pre-stable versions (like 0.xx), they are there to show progress and can be used to see the real status of things on a ESP32-P4-Module-DEV-KIT from Waveshare
-
----
 
 ## ✨ What RadonOS is about
 
