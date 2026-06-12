@@ -154,12 +154,12 @@ Based on Espressif’s **Longevity Commitment**, currently supported hardware wi
 
 | SoC        | EOL Year | Currently supported |
 | ---------- | -------- | ------------------- |
-| ESP32-P4   | 2037     | ✅ Yes (initial)    |
+| ESP32-P4   | 2037     | ✅ Yes              |
 | ESP32-E22  | TBA      | ❌ Not Yet          |
 | ESP32-S3   | 2033     | ✅ Yes              |
 | ESP32-S2   | 2032     | ✅ Yes              |
 | ESP32-C6   | 2035     | ✅ Yes              |
-| ESP32-C61  | TBA      | ✅ Yes (initial)    |
+| ESP32-C61  | 2037     | ✅ Yes (initial)    |
 | ESP32-C5   | 2037     | ✅ Yes              |
 | ESP32-C3   | 2033     | ✅ Yes              |
 | ESP8685    | 2033     | ✅ Yes              |
