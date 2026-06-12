@@ -69,10 +69,10 @@ RadonOS focuses on:
 > Any Hardware that Espressif releases later on will be placed in the table above as soon as possible
 
 ### General Requirements
-|           | MCU Family          | Flash  | PSRAM  | Connectivity               | GPIO                                          |
-| --------- | ------------------- | ------ | ------ | -------------------------- | --------------------------------------------- |
-| Suggested | ESP32-S2+           | >= 8MB | >= 1MB | WiFi and/or Ethernet + BLE | >= 9 Data GPIOs and 6 Power (3V3 / GND / VIN) |
-| Minimal   | Any ESP32-class SoC | >= 4MB | >= 0MB | Any kind                   | >= 3 Data GPIOs and 2 Power (3V3 / GND)       |
+|           | MCU Family          | Flash  | PSRAM  | Connectivity               | Software Capability |
+| --------- | ------------------- | ------ | ------ | -------------------------- | ------------------- |
+| Suggested | ESP32-S2+           | >= 8MB | >= 1MB | WiFi and/or Ethernet + BLE | FreeRTOS Enabled    |
+| Minimal   | Any ESP32-class SoC | >= 4MB | >= 0MB | Any kind                   | FreeRTOS Enabled    |
 
 
 ---
