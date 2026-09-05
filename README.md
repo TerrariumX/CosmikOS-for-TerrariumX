@@ -5,17 +5,17 @@
   >
 </p>
 
-RadonOS is a lightweight, modular operating system built for modern ESP32-based boards.
+CosmikOS is a lightweight, modular operating system built for modern ESP32-based boards.
 
 It is the core OS behind the **TerrariumX ecosystem**, but it can also be used as a standalone platform for advanced ESP32 projects that need reliability, structure, and a clean local interface.
 
-RadonOS is designed with a simple idea in mind: **treat embedded systems like real systems**, not disposable firmware.
+CosmikOS is designed with a simple idea in mind: **treat embedded systems like real systems**, not disposable firmware.
 
 ---
 
-## ✨ What RadonOS is about
+## ✨ What CosmikOS is about
 
-RadonOS focuses on:
+CosmikOS focuses on:
 
 * 🧩 **Modularity** – services are independent and restartable
 * 🌐 **Local-first operation** – no cloud required
@@ -64,7 +64,7 @@ RadonOS focuses on:
 
 > Specific board support may vary in capabilities depending on the board hardware configuration.
 
-> The ESP8266 and ESP8285 are not supported at launch because they are marked NRND by Espressif and lack full FreeRTOS support, which is a core requirement for RadonOS.
+> The ESP8266 and ESP8285 are not supported at launch because they are marked NRND by Espressif and lack full FreeRTOS support, which is a core requirement for CosmikOS.
 
 > Any Hardware that Espressif releases later on will be placed in the table above as soon as possible
 
@@ -77,23 +77,10 @@ RadonOS focuses on:
 
 ---
 
-## 🧠 Architecture (high level)
-
-RadonOS uses a **service-oriented architecture**:
-
-* Core kernel (Internally called Oganessium Kernel)
-* Hardware Abstraction Layer (HAL)
-* Independent system services (GPIO, Network, Storage, Sensors, Power, etc.)
-* Local WebUI server
-* MQTT bridge
-
-Each service can be started, stopped, or restarted independently, improving reliability and making debugging much easier compared to monolithic firmware designs.
-
----
 
 ## 🌐 WebUI
 
-RadonOS includes a fully local WebUI that runs directly on the device:
+CosmikOS includes a fully local WebUI that runs directly on the device:
 
 * Modern Material-inspired design
 * Smooth animations and micro-interactions
@@ -108,18 +95,18 @@ Despite the visual complexity, the WebUI is designed to stay lightweight and eff
 
 ## 🔄 Updates, OTA & long-term support
 
-RadonOS uses a user-controlled update model.
+CosmikOS uses a user-controlled update model.
 
 ### Major Updates 
 
-RadonOS will receive major updates about every year, that include lots of new features, bugfixes, UI changes, software improvements, optimization (may be kinda buggy at release)
+CosmikOS will receive major updates about every year, that include lots of new features, bugfixes, UI changes, software improvements, optimization (may be kinda buggy at release)
 
 Major updates can be recognized by a change in the first value for the version (like from 1.x.x to 2.x.x)
 
 
 ### Cumulative updates
 
-RadonOS will receive cumulative updates, that can run on a monthly schedule, they mostly include bug fixes and minor UI changes, along optimizations and API changes.
+CosmikOS will receive cumulative updates, that can run on a monthly schedule, they mostly include bug fixes and minor UI changes, along optimizations and API changes.
 
 Cumulative release can be recognized from the second value of the version changing (like from x.1.x to x.2.x)
 
@@ -133,7 +120,7 @@ They can be recognized from the third value of the version changing (like in x.x
 
 ### Build number
 
-Build numbers in RadonOS are integer numbers that indicate the single modification of the code, they are usually present after the version: x.x.x xxxx where xxxx is the build number.
+Build numbers in CosmikOS are integer numbers that indicate the single modification of the code, they are usually present after the version: x.x.x xxxx where xxxx is the build number.
 
 This value will change every release.
 
@@ -179,7 +166,7 @@ Based on Espressif’s **Longevity Commitment**, currently supported hardware wi
 
 ## 🚧 Project Status
 
-RadonOS is under **active development**.
+CosmikOS is under **active development and in very early pre-production stage**.
 
 This means:
 
@@ -187,7 +174,7 @@ This means:
 * New features arriving frequently
 * Possible breaking changes in early versions
 
-If you are using RadonOS for testing or development, feedback is highly appreciated.
+If you are using CosmikOS for testing or development, feedback is highly appreciated.
 
 ---
 
@@ -208,6 +195,6 @@ Feel free to open issues or pull requests.
 
 ## 🔓 License
 
-RadonOS is fully **open source** and free to use.
+CosmikOS is fully **open source** and free to use.
 
 See the LICENSE file for detailed license information.
