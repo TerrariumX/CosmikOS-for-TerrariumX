@@ -1,7 +1,10 @@
 # RadonOS
 <p align="center">
   <img 
-    src="WebUI/WebUI0-37.png"
+    src="WebUI/WebUI040Splash.png"
+  >
+  <img 
+    src="WebUI/WebUI040.png"
   >
 </p>
 
