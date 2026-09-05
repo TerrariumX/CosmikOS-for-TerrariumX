@@ -1,4 +1,4 @@
-# RadonOS
+# CosmikOS with Catalyst Kernel
 <p align="center">
   <img 
     src="WebUI/WebUI040Splash.png"
