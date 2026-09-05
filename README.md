@@ -101,27 +101,31 @@ Despite the visual complexity, the WebUI is designed to stay lightweight and eff
 
 ## 🔄 Updates, OTA & long-term support
 
-CosmikOS uses a user-controlled update model.
+CosmikOS uses a user-controlled update model (you are not forced to update if you do not want to).
+Note that as I am developing this OS alone, and I am a student, version like 26 when 27 release are deemed EOL and will not receive security updates or bug fixes, you will be notified of that via WebUI every time a new major release goes live and you haven't updated in about a month.
+
 
 ### Major Updates 
 
 CosmikOS will receive major updates about every year, that include lots of new features, bugfixes, UI changes, software improvements, optimization (may be kinda buggy at release)
 
-Major updates can be recognized by a change in the first value for the version (like from 1.x.x to 2.x.x)
+Major updates can be recognised by a change in the first value for the version (like from 26.x.x to 27.x.x)
+
+**Note**: The updates follow a year of service number, meaning, if a major version comes out at the end of 2026 or start of 2027, the release will be 27.x.x, this does not apply to Cumulative and Minor updates, so if the version is X.Y.Z, Y is **not** the month and Z is **not** a day, those are indicative values
 
 
 ### Cumulative updates
 
 CosmikOS will receive cumulative updates, that can run on a monthly schedule, they mostly include bug fixes and minor UI changes, along optimizations and API changes.
 
-Cumulative release can be recognized from the second value of the version changing (like from x.1.x to x.2.x)
+Cumulative release can be recognised from the second value of the version changing (like from xx.1.x to xx.2.x)
 
 
 ### Minor Updates
 
 RadonOS is also subject to minor releases, that can follow a weekly or daily schedule, they include minor bug fixes, no UI changes and optimizations
 
-They can be recognized from the third value of the version changing (like in x.x.0 to x.x.1)
+They can be recognised from the third value of the version changing (like in xx.x.0 to xx.x.1)
 
 
 ### Build number
