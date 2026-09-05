@@ -12,7 +12,7 @@ CosmikOS is a lightweight, modular operating system built for modern ESP32-based
 
 It is the core OS behind the **TerrariumX ecosystem**, but it can also be used as a standalone platform for advanced ESP32 projects that need reliability, structure, and a clean local interface.
 
-CosmikOS is designed with a simple idea in mind: **treat embedded systems like real systems**, not disposable firmware.
+CosmikOS is designed with a simple idea in mind: **treat embedded systems like real systems**, not disposable hardware and software.
 
 ---
 
@@ -20,36 +20,38 @@ CosmikOS is designed with a simple idea in mind: **treat embedded systems like r
 
 CosmikOS focuses on:
 
-* 🧩 **Modularity** – services are independent and restartable
+* 🧩 **Modularity** – services are independent and restartable (WIP, based on FreeRTOS Tasks)
 * 🌐 **Local-first operation** – no cloud required
 * 🔌 **MQTT-native design** – easy Home Assistant and automation integration
 * 🖥️ **Modern WebUI** – animated, responsive, and optimized for embedded hardware
 * 🛠️ **Long-term support** – hardware and software designed to evolve together
-* 🔁 **Multi-MCU awareness** – ready for boards with main MCU + secondary / BIOS MCU
+
+---
+
+## 🧪 Catalyst Kernel
+
+Catalyst Kernel is the base or backend of CosmikOS, it manages:
+
+* **HAL** - Hardware Abstraction Layer
+* **WebUI Integration**
+* **Smart Home Integration**
+* **Sensor Auto-Discovery and Auto-Config**
+* **Sanity Checks**
+* **Wifi and LAN Connectivity**
+* **Module Management** - Like screens
+* **Auto-Updates** - Updates automatically only using a button, no necessity for manually flashing
+* **Config Read and Write**
 
 ---
 
 ## 🧩 Supported Boards and Hardware
 
-### Waveshare boards
-
-| Board                   | MCU      | Notes                          | Support | Tested |
-| ----------------------- | -------- | ------------------------------ | ------- | ------ |
-| ESP32-P4-Module-DEV-KIT | ESP32-P4 | Full-featured dev-kit          |✅       | ✅    |
-| ESP32-P4-WIFI6-DEV-KIT  | ESP32-P4 | Full-featured dev-kit          |✅       | ❌    |
-| ESP32-P4-NANO           | ESP32-P4 | Compact form factor            |✅       | ❌    |
-| ESP32-P4-WIFI6          | ESP32-P4 | WiFi-enabled variant           |✅       | ❌    |
-| ESP32-P4-ETH            | ESP32-P4 | Ethernet-enabled variant       |✅       | ❌    |
-| ESP32-S3-ETH            | ESP32-S3 | Ethernet-enabled variant       |✅       | ❌    |
-| ESP32-S3-Mini           | ESP32-S3 | Small form factor WiFi-enabled |✅       | ❌    |
-| ESP32-S3-Nano           | ESP32-S3 | WiFi-enabled dev-kit           |✅       | ❌    |
-
-
-### General DevKits
+### Espressif SoCs
 
 | Family             | Supported  | Tested in Preview Builds? | Notes                                                  |
-| ------------------ | ---------- | ------------------------- |-------------------------------------------------------- | 
+| ------------------ | ---------- | ------------------------- |------------------------------------------------------- | 
 | ESP32-P4           | ✅         | ✅                       | Primary target platform                                 | 
+| ESP32-S31          | ⚠️ WDB     | ⚠️ WDB                   | Possibly supported at launch or shortly after           |
 | ESP32-S3           | ✅         | ✅                       | Supported at launch                                     |
 | ESP32-S2           | 🛠️         | ❌                       | Supported after update                                  |
 | ESP32-C6           | 🛠️         | ✅                       | Supported after update                                  |
@@ -61,11 +63,12 @@ CosmikOS focuses on:
 | ESP32-H2           | 🛠️         | ❌                       | Limited Connectivity, Unknown support in the future     |
 | ESP32              | 🛠️         | ❌                       | Supported soon after launch                             |
 | ESP32-E22          | ❓TBA      | ❌                       | Unreleased Module                                       |
-| ESP32-S31          | ❓TBA      | ❌                       | Unreleased Module                                       |
 | ESP32-H21          | ❓TBA      | ❌                       | Unreleased Module                                       |
 | ESP32-H4           | ❓TBA      | ❌                       | Unreleased Module                                       |
 
 > Specific board support may vary in capabilities depending on the board hardware configuration.
+
+> Boards marked with ⚠️ WDB (Waiting Devkit Board) are high priority modules, just waiting to be supported and to be tested in order to verify functionality 
 
 > The ESP8266 and ESP8285 are not supported at launch because they are marked NRND by Espressif and lack full FreeRTOS support, which is a core requirement for CosmikOS.
 
@@ -75,7 +78,7 @@ CosmikOS focuses on:
 |           | MCU Family          | Flash  | PSRAM  | Connectivity               | Software Capability |
 | --------- | ------------------- | ------ | ------ | -------------------------- | ------------------- |
 | Suggested | ESP32-S2+           | >= 8MB | >= 1MB | WiFi and/or Ethernet + BLE | FreeRTOS Enabled    |
-| Minimal   | Any ESP32-class SoC | >= 4MB | >= 0MB | Any kind                   | FreeRTOS Enabled    |
+| Minimal   | Any ESP32-class SoC | >= 4MB | >= 0MB | WiFi / ETH                 | FreeRTOS Enabled    |
 
 
 ---
@@ -129,14 +132,14 @@ This value will change every release.
 
 ### Software EOL for RadonOS
 
-Updates are never forced: the system checks for updates only when explicitly requested, and applying them is always a conscious user action.
+Updates are never forced: the system checks for updates only when explicitly requested (unless you set the board to specifically auto-check), and applying them is always a conscious user action (unless auto-update is active).
 
 When a board or firmware branch reaches **End Of Life (EOL)**, it enters a **Frozen** state:
 - The device remains fully functional
-- No new features or updates are provided
+- No new features or updates are provided (unless they are important bug fixes)
 - The last supported firmware version remains available
 - No forced updates, migrations, or shutdowns occur
-- The EOL / Frozen status is clearly reported in the local WebUI
+- The EOL / Frozen status is clearly reported in the local WebUI (while not being disturbing, just the update button becomes unusable and there is a popup every reboot remembering why)
 
 This approach prioritizes long-term stability and ensures that deployed systems can continue to operate reliably without unexpected changes.
 
@@ -146,6 +149,7 @@ Based on Espressif’s **Longevity Commitment**, currently supported hardware wi
 | ---------- | -------- | ------------------- |
 | ESP32-P4   | 2037     | ✅ Yes              |
 | ESP32-E22  | TBA      | ❌ Not Yet          |
+| ESP32-S31  | TBA      | ❌ Not Yet          |
 | ESP32-S3   | 2033     | ✅ Yes              |
 | ESP32-S2   | 2032     | ✅ Yes              |
 | ESP32-C6   | 2035     | ✅ Yes              |
@@ -200,4 +204,4 @@ Feel free to open issues or pull requests.
 
 CosmikOS is fully **open source** and free to use.
 
-See the LICENSE file for detailed license information.
+See the LICENSE file for detailed license information as soon as it is available.
